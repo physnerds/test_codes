@@ -40,6 +40,10 @@ add_executable(test_tbb test_tbb.cpp)
 target_link_directories(test_tbb PUBLIC ${EXTRA_LIBDIR})
 target_link_libraries(test_tbb PRIVATE nlohmann_json::nlohmann_json tbb ${libraries})
 
+add_executable(test_arena test_arena.cpp)
+target_link_directories(test_arena PUBLIC ${EXTRA_LIBDIR})
+target_link_libraries(test_arena PRIVATE nlohmann_json::nlohmann_json tbb ${libraries})
+
 
 add_executable(test_mpi test_mpi.cc)
 target_link_directories(test_mpi PUBLIC ${EXTRA_LIBDIR})
@@ -49,6 +53,6 @@ add_executable(test_atomic test_atomic.cpp)
 target_link_directories(test_atomic PUBLIC ${EXTRA_LIBDIR})
 target_link_libraries(test_atomic PRIVATE nlohmann_json::nlohmann_json tbb ${libraries})
 
-add_executable(test_functor test_functor.cpp)
-target_link_directories(test_functor PUBLIC ${EXTRA_LIBDIR})
-target_link_libraries(test_functor PRIVATE tbb ${libraries})
+#add_executable(test_functor test_functor.cpp)
+#target_link_directories(test_functor PUBLIC ${EXTRA_LIBDIR})
+#target_link_libraries(test_functor PRIVATE tbb ${libraries})
