@@ -56,3 +56,13 @@ target_link_libraries(test_atomic PRIVATE nlohmann_json::nlohmann_json tbb ${lib
 #add_executable(test_functor test_functor.cpp)
 #target_link_directories(test_functor PUBLIC ${EXTRA_LIBDIR})
 #target_link_libraries(test_functor PRIVATE tbb ${libraries})
+
+add_executable(unpack_tuple unpack_tuple.cpp)
+target_link_directories(unpack_tuple PUBLIC ${EXTRA_LIBDIR})
+target_link_libraries(unpack_tuple PRIVATE nlohmann_json::nlohmann_json tbb ${libraries})
+
+
+add_executable(test_tuple test_tuple.cpp)
+target_link_directories(test_tuple PUBLIC ${EXTRA_LIBDIR})
+target_link_libraries(test_tuple PRIVATE tbb ${libraries})
+
